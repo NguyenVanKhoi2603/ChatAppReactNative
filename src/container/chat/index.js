@@ -58,13 +58,13 @@ const Chat = ({ route, navigation }) => {
     setMsgValue("");
     if (msgValue) {
       senderMsg(msgValue, currentUserId, guestUserId, "")
-        .then(() => {})
+        .then(() => { })
         .catch((err) => alert(err));
 
       // * guest user
 
       recieverMsg(msgValue, currentUserId, guestUserId, "")
-        .then(() => {})
+        .then(() => { })
         .catch((err) => alert(err));
     }
   };
@@ -86,13 +86,13 @@ const Chat = ({ route, navigation }) => {
         let source = "data:image/jpeg;base64," + response.data;
 
         senderMsg(msgValue, currentUserId, guestUserId, source)
-          .then(() => {})
+          .then(() => { })
           .catch((err) => alert(err));
 
         // * guest user
 
         recieverMsg(msgValue, currentUserId, guestUserId, source)
-          .then(() => {})
+          .then(() => { })
           .catch((err) => alert(err));
       }
     });
@@ -107,11 +107,11 @@ const Chat = ({ route, navigation }) => {
     navigation.navigate("ShowFullImg", { name, img: chatImg });
   };
   return (
-    <SafeAreaView style={[globalStyle.flex1, { backgroundColor: color.BLACK }]}>
+    <SafeAreaView style={[globalStyle.flex1, { backgroundColor: color.WHITE }]}>
       <KeyboardAvoidingView
         keyboardVerticalOffset={deviceHeight > smallDeviceHeight ? 100 : 70}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={[globalStyle.flex1, { backgroundColor: color.BLACK }]}
+        style={[globalStyle.flex1, { backgroundColor: color.BLACK, padding: 10 }]}
       >
         <TouchableWithoutFeedback
           style={[globalStyle.flex1]}

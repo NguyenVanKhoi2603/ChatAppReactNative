@@ -12,8 +12,8 @@ const ShowUsers = ({ name, img, onImgTap, onNameTap }) => {
             {img ? (
               <Thumbnail source={{ uri: img }} resizeMode="cover" />
             ) : (
-              <Text style={styles.thumbnailName}>{name.charAt(0)}</Text>
-            )}
+                <Text style={styles.thumbnailName}>{name.charAt(0)}</Text>
+              )}
           </TouchableOpacity>
 
           <Body>

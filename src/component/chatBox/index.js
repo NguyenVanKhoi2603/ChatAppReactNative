@@ -21,8 +21,7 @@ const ChatBox = ({ userId, msg, img, onImgTap }) => {
         style={[
           styles.chatContainer,
           isCurrentUser && {
-            borderTopLeftRadius: 20,
-            borderTopRightRadius: 0,
+            borderRadius: 10,
             backgroundColor: color.DARK_GRAY,
           },
         ]}
@@ -38,12 +37,12 @@ const ChatBox = ({ userId, msg, img, onImgTap }) => {
             </TouchableOpacity>
           </CardItem>
         ) : (
-          <Text
-            style={[styles.chatTxt, isCurrentUser && { color: color.WHITE }]}
-          >
-            {msg}
-          </Text>
-        )}
+            <Text
+              style={[styles.chatTxt, isCurrentUser && { color: color.WHITE }]}
+            >
+              {msg}
+            </Text>
+          )}
       </View>
     </Card>
   );
