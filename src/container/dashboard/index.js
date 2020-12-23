@@ -35,7 +35,7 @@ export default ({ navigation }) => {
           onPress={() =>
             Alert.alert(
               "Logout",
-              "Are you sure to log out",
+              "Are you sure to log out?",
               [
                 {
                   text: "Yes",
@@ -112,7 +112,7 @@ export default ({ navigation }) => {
       } else if (response.customButton) {
         console.log("User tapped custom button: ", response.customButton);
       } else {
-        // Base 64 image:
+
         let source = "data:image/jpeg;base64," + response.data;
         dispatchLoaderAction({
           type: LOADING_START,
@@ -136,7 +136,7 @@ export default ({ navigation }) => {
       }
     });
   };
-  // * LOG OUT
+  // Logout
   const logout = () => {
     LogOutUser()
       .then(() => {
@@ -149,7 +149,7 @@ export default ({ navigation }) => {
       .catch((err) => alert(err));
   };
 
-  // * ON IMAGE TAP
+  // Chọn ảnh
   const imgTap = (profileImg, name) => {
     if (!profileImg) {
       navigation.navigate("ShowFullImg", {
@@ -161,7 +161,7 @@ export default ({ navigation }) => {
     }
   };
 
-  // * ON NAME TAP
+  // Touch name User
   const nameTap = (profileImg, name, guestUserId) => {
     if (!profileImg) {
       navigation.navigate("Chat", {
@@ -179,7 +179,7 @@ export default ({ navigation }) => {
       });
     }
   };
-  // * GET OPACITY
+
 
   const getOpacity = () => {
     if (deviceHeight < smallDeviceHeight) {

@@ -102,12 +102,11 @@ const Chat = ({ route, navigation }) => {
     setMsgValue(text);
   };
 
-  //   * On image tap
   const imgTap = (chatImg) => {
     navigation.navigate("ShowFullImg", { name, img: chatImg });
   };
   return (
-    <SafeAreaView style={[globalStyle.flex1, { backgroundColor: color.WHITE }]}>
+    <SafeAreaView style={[globalStyle.flex1, { backgroundColor: color.BLACK }]}>
       <KeyboardAvoidingView
         keyboardVerticalOffset={deviceHeight > smallDeviceHeight ? 100 : 70}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
@@ -135,19 +134,19 @@ const Chat = ({ route, navigation }) => {
             {/* Send Message */}
             <View style={styles.sendMessageContainer}>
               <InputField
-                placeholder="Type Here"
+                placeholder="Aa"
                 numberOfLines={10}
                 inputStyle={styles.input}
                 value={msgValue}
                 onChangeText={(text) => handleOnChange(text)}
               />
               <View style={styles.sendBtnContainer}>
-                <MaterialCommunityIcons
+                {/* <MaterialCommunityIcons
                   name="camera"
                   color={color.WHITE}
                   size={appStyle.fieldHeight}
                   onPress={() => handleCamera()}
-                />
+                /> */}
                 <MaterialCommunityIcons
                   name="send-circle"
                   color={color.WHITE}

@@ -6,6 +6,7 @@ export default StyleSheet.create({
     backgroundColor: color.SEMI_TRANSPARENT,
     borderBottomWidth: 1,
     borderColor: color.SILVER,
+
   },
   cardItemStyle: {
     backgroundColor: color.SEMI_TRANSPARENT,
