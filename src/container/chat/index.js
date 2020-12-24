@@ -141,12 +141,12 @@ const Chat = ({ route, navigation }) => {
                 onChangeText={(text) => handleOnChange(text)}
               />
               <View style={styles.sendBtnContainer}>
-                {/* <MaterialCommunityIcons
+                <MaterialCommunityIcons
                   name="camera"
                   color={color.WHITE}
                   size={appStyle.fieldHeight}
                   onPress={() => handleCamera()}
-                /> */}
+                />
                 <MaterialCommunityIcons
                   name="send-circle"
                   color={color.WHITE}
