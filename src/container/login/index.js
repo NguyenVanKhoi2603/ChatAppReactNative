@@ -103,7 +103,7 @@ export default ({ navigation }) => {
         >
           {logo && (
             <View style={[globalStyle.containerCentered]}>
-              <Logo />
+              {/* <Logo /> */}
             </View>
           )}
           <View style={[globalStyle.flex2, globalStyle.sectionCentered]}>
