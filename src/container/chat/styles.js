@@ -10,7 +10,7 @@ export default StyleSheet.create({
   input: {
     borderTopLeftRadius: 20,
     borderBottomLeftRadius: 20,
-    width: "87%",
+    width: "80%",
   },
 
   sendBtnContainer: {
